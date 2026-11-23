@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bliss Furnishing — Crafting Comfort, Shaping Spaces | Premium Outdoor Furniture, UAE</title>
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+<div id="loader"><img src="../images/logo.png" alt="Bliss Furnishing"></div>
+
+<div class="nav-shell">
+  <div class="nav-in">
+    <a class="logo" href="index.html"><img src="../images/logo.png" alt="Bliss Furnishing"></a>
+    <nav class="main" id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-acts">
+      <a class="nicon" href="account.html" title="My Account">👤</a>
+      <a class="nicon" href="cart.html" title="Cart">🛍<span class="cartCount">0</span></a>
+      <a class="btn" href="contact.html">Get a Quote <span class="arr">→</span></a>
+    </div>
+    <button class="burger" onclick="document.getElementById('mainNav').classList.toggle('open')">☰</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="bg" id="heroBg"></div>
+  <button class="harr prev" id="hPrev" aria-label="Previous slide">‹</button>
+  <button class="harr next" id="hNext" aria-label="Next slide">›</button>
+  <div class="hero-texts wrap" id="heroTexts"></div>
+  <div class="hdots" id="heroDots"></div>
+  <div class="scroll-hint">Scroll</div>
+  <div class="marquee"><div class="track" id="mq"></div></div>
+</section>
+
+<section class="wrap sec">
+  <div class="sec-head rv">
+    <div class="eyebrow">Shop by Category</div>
+    <h2>Made for <em>Emirates</em> outdoors</h2>
+    <p>Sofas, dining, gazebos, shades and more — designed to inspire relaxation and endure the Gulf sun in style.</p>
+  </div>
+  <div class="tiles">
+    <a class="tile rv" href="collection.html"><img src="../images-uae/sofa.jpg" alt="Outdoor sofas by a Dubai pool"><div class="cap"><div><b>Sofas</b><br><span>Poolside luxury</span></div><span class="arr">→</span></div></a>
+    <a class="tile rv" data-d="1" href="collection.html"><img src="../images-uae/dining.jpg" alt="Villa dining terrace in Dubai"><div class="cap"><div><b>Dining Inspirations</b><br><span>Terrace gatherings</span></div><span class="arr">→</span></div></a>
+    <a class="tile rv" data-d="2" href="collection.html"><img src="../images-uae/pergola.jpg" alt="Pergola terrace with palms"><div class="cap"><div><b>Gazebos & Pergolas</b><br><span>Shade with style</span></div><span class="arr">→</span></div></a>
+    <a class="tile rv" data-d="3" href="collection.html"><img src="../images-uae/umbrella.jpg" alt="Beach club umbrellas, Dubai"><div class="cap"><div><b>Umbrellas & Shades</b><br><span>Beach-club comfort</span></div><span class="arr">→</span></div></a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="feature rv">
+    <div class="fbg"></div>
+    <img class="main" data-cimg="home.milanoImg" src="../images-uae/sofa.jpg" alt="Milano Sofa set by a Dubai pool, Burj Khalifa skyline behind">
+    <div>
+      <div class="eyebrow" style="color:var(--rose2)">Featured — Relax in Style</div>
+      <h2 data-cnt="home.milanoTitle">The Milano Sofa</h2>
+      <p data-cnt="home.milanoText">Crafted for comfort, designed for elegance, the Milano Sofa brings resort-style relaxation to your outdoor space. With plush cushioning, a sleek silhouette, and weather-resistant materials, it's the perfect blend of luxury and durability.</p>
+      <p data-cnt="home.milanoText2">Every size available — made to fit your villa, terrace or resort.</p>
+      <div class="swatches">
+        <span style="background:#7d9db5"></span><span style="background:#e07856"></span><span style="background:#8a8d91"></span>
+        <small>Ocean Mist · Sunset Coral · Classic Gray</small>
+      </div>
+      <a class="btn rose" href="#" onclick="Bliss.addToCart(1);return false">Add to Cart</a> <a class="btn" href="contact.html" style="margin-left:8px">Enquire <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="sec-head rv">
+    <div class="eyebrow">The Collection</div>
+    <h2 data-cnt="home.collTitle">Loved by villas & <em>resorts</em></h2>
+    <p data-cnt="home.collSub">Premium designs in weather-resistant materials — every piece customisable in size, fabric and finish.</p>
+  </div>
+  <div class="slider" id="prodSlider">
+    <button class="sbtn prev" aria-label="Previous products">‹</button>
+    <div class="sview"><div class="strack" id="sliderTrack"></div></div>
+    <button class="sbtn next" aria-label="Next products">›</button>
+  </div>
+  <div class="sdots" id="sliderDots"></div>
+  <div style="text-align:center;margin-top:36px"><a class="btn" href="collection.html">View Full Collection <span class="arr">→</span></a></div>
+</section>
+
+<section class="wrap" style="padding-bottom:92px">
+  <div class="sec-head rv">
+    <div class="eyebrow">Why Bliss</div>
+    <h2>The Bliss advantage</h2>
+  </div>
+  <div class="why">
+    <div class="w rv"><div class="n">01</div><h3 data-cnt="home.why1t">Expert Craftsmanship</h3><p data-cnt="home.why1d">Superior craftsmanship and high-quality materials ensure premium outdoor furniture built for durability and elegance.</p></div>
+    <div class="w rv" data-d="1"><div class="n">02</div><h3 data-cnt="home.why2t">Affordable Luxury</h3><p data-cnt="home.why2d">Modern designs and high-quality materials at accessible prices, making premium outdoor living more attainable.</p></div>
+    <div class="w rv" data-d="2"><div class="n">03</div><h3 data-cnt="home.why3t">Customized Solutions</h3><p data-cnt="home.why3d">Customizable designs for villas, resorts, and commercial projects, tailored to specific client needs.</p></div>
+    <div class="w rv" data-d="3"><div class="n">04</div><h3 data-cnt="home.why4t">Strong Online Presence</h3><p data-cnt="home.why4d">Active online presence and wide distribution network across the UAE and international markets.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split rv">
+    <div>
+      <div class="eyebrow">About Bliss</div>
+      <h2 data-cnt="home.aboutTitle">A leading outdoor furniture brand in the UAE</h2>
+      <p data-cnt="home.aboutText">Bliss Furnishing is one of the leading outdoor furniture brands in the UAE, a proud legacy of Weavers Creation, a trusted name in the industry for over 15 years.</p>
+      <p data-cnt="home.aboutText2">We blend superior materials, innovative design, and timeless elegance to create spaces that inspire comfort and style — through our own showroom in Indonesia and a strong presence across the UAE and international markets.</p>
+      <a class="btn" href="about.html" style="margin-top:8px">Our Story <span class="arr">→</span></a>
+    </div>
+    <div class="imgbox"><img data-cimg="home.aboutImg" src="../images/terrace.jpg" alt="Dubai villa terrace with outdoor dining set"></div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <div class="sec-head center rv">
+    <div class="eyebrow">Fabric Partners</div>
+    <h2>Built with the world's best outdoor fabrics</h2>
+  </div>
+  <div class="partners rv">
+    <div class="plogo"><img src="../images/logos/sunbrella.png" alt="Sunbrella logo"><span>Sunbrella</span></div>
+    <div class="plogo"><img src="../images/logos/tempotest.png" alt="Tempotest logo"><span>Tempotest</span></div>
+    <div class="plogo"><img src="../images/logos/agora.png" alt="Agora logo"><span>Agora</span></div>
+    <div class="plogo"><img src="../images/logos/sunproof.png" alt="Sunproof logo"><span>Sunproof</span></div>
+    <div class="plogo"><img src="../images/logos/twitchell.png" alt="Twitchell logo"><span>Twitchell</span></div>
+    <div class="plogo"><img src="../images/logos/phifer.png" alt="Phifer Incorporated logo"><span>Phifer Incorporated</span></div>
+    <div class="plogo"><img src="../images/logos/sergeferrari.png" alt="Serge Ferrari logo"><span>Serge Ferrari</span></div>
+    <div class="plogo"><img src="../images/logos/batyline.png" alt="Batyline logo"><span>Batyline</span></div>
+    <div class="plogo"><img src="../images/logos/reinhardt.png" alt="Leder Reinhardt Germany logo"><span>Leder Reinhardt Germany</span></div>
+    <div class="plogo"><img src="../images/logos/wisanka.png" alt="Wisanka Indonesia logo"><span>Wisanka Indonesia</span></div>
+    <div class="plogo"><div class="wordmark">Spanish Canvas</div><span>Spanish Canvas</span></div>
+  </div>
+</section>
+
+<section class="wrap sec" style="padding-top:10px">
+  <div class="sec-head center rv">
+    <div class="eyebrow">Client Reviews</div>
+    <h2>What our <em>clients</em> say</h2>
+    <p>Villa owners, resorts, hotels and designers across the Emirates trust Bliss with their outdoor spaces.</p>
+  </div>
+  <div class="rev rv" id="revBox">
+    <button class="sbtn prev" aria-label="Previous review">‹</button>
+    <div class="rview"><div class="rtrack" id="revTrack"></div></div>
+    <button class="sbtn next" aria-label="Next review">›</button>
+  </div>
+  <div class="sdots" id="revDots"></div>
+</section>
+
+<section class="wrap">
+  <div class="cta rv">
+    <div class="cbg"></div>
+    <h2 data-cnt="home.ctaTitle">Let's build something beautiful together</h2>
+    <p data-cnt="home.ctaText">A premium residential renovation, a luxury commercial lounge, or a high-end resort outdoor installation — our team is ready.</p>
+    <a class="btn rose" href="contact.html">Start the Conversation <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div><a class="logo" href="index.html"><img src="../images/logo.png" alt="Bliss Furnishing"></a><p style="margin-top:16px" data-cnt="footer.tag">Crafting Comfort, Shaping Spaces.<br>A proud legacy of Weavers Creation — 15+ years of craftsmanship.</p></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="collection.html">Collection</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+      <div><h4>Collection</h4><a href="collection.html">Sofas</a><a href="collection.html">Chairs</a><a href="collection.html">Dining</a><a href="collection.html">Gazebos & Pergolas</a><a href="collection.html">Umbrellas & Shades</a></div>
+      <div><h4>Get in Touch</h4><p>Email: sales@blissfurnishing.ae</p><p>Phone: +92 313 9168846</p><p>Web: www.blissfurnishing.ae</p><p>Showrooms: UAE & Indonesia (Jepara)</p></div>
+    </div>
+    <div class="big-word">Bliss</div>
+    <div class="foot-bar"><span>© 2026 Bliss Furnishing. All rights reserved.</span><span>Crafting Comfort, Shaping Spaces</span></div>
+  </div>
+</footer>
+
+<script>window.ROOT="../";</script>
+<script src="../data/products.js"></script>
+<script src="../assets/store.js?v=3"></script>
+<script>
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),500));
+setTimeout(()=>document.getElementById('loader').classList.add('done'),2200);
+const items=["Outdoor Sofas","Gazebos & Pergolas","Umbrellas & Shades","Dining Sets","Sunbeds & Cabanas","Swings","Custom FF&E Projects","Made in Jepara · Finished in Dubai"];
+const seq=items.map(t=>`<span>${t}</span><i>✦</i>`).join('');
+document.getElementById('mq').innerHTML=seq+seq;
+/* ---- products: infinite auto slider (data from store) ---- */
+const track=document.getElementById('sliderTrack');
+function cardHTML(p){
+ return `<div class="pcard"><div class="ph"><img src="${Bliss.img(p)}" alt="${p.n}"><span class="pill${p.f?' rose':''}">${p.f?'Featured':p.c}</span></div>
+ <div class="info"><h3>${p.n}</h3><p class="desc">${p.d||''}</p>
+ <div class="row"><div class="price">${p.price?Bliss.money(p.price):'Price on Request'}<small>${p.price?'Incl. VAT':'Custom sizes available'}</small></div>
+ <button class="enq" style="background:var(--navy);color:#fff;border:0;cursor:pointer" onclick="Bliss.addToCart(${p.id})">Add to Cart</button></div></div></div>`;
+}
+const plist=Bliss.products();
+track.innerHTML=plist.map(cardHTML).join('');
+let sidx=0, stimer=null, sAnimating=false;
+const sPer=()=>innerWidth<=640?1:innerWidth<=1020?2:3;
+function sStep(){ const c=track.children[0]; return c?c.getBoundingClientRect().width+20:0; }
+function sClones(){
+  if(!track.children.length) return;
+  track.querySelectorAll('.clone').forEach(e=>e.remove());
+  const pv=sPer();
+  for(let i=0;i<pv;i++){ const cl=track.children[i].cloneNode(true); cl.classList.add('clone'); track.appendChild(cl); }
+}
+function sApply(anim){
+  track.style.transition=anim?'':'none';
+  track.style.transform=`translateX(${-sidx*sStep()}px)`;
+}
+function sNext(){
+  if(sAnimating)return; sAnimating=true; sidx++; sApply(true);
+  setTimeout(()=>{ if(sidx>=plist.length){ sidx=0; sApply(false); } sAnimating=false; },680);
+}
+function sPrev(){
+  if(sAnimating)return;
+  if(sidx===0){ sidx=plist.length; sApply(false); requestAnimationFrame(()=>requestAnimationFrame(()=>{ sAnimating=true; sidx--; sApply(true); setTimeout(()=>sAnimating=false,680); })); }
+  else { sAnimating=true; sidx--; sApply(true); setTimeout(()=>sAnimating=false,680); }
+}
+function sAuto(){ clearInterval(stimer); stimer=setInterval(sNext,4200); }
+document.querySelector('#prodSlider .prev').addEventListener('click',()=>{sPrev(); sAuto();});
+document.querySelector('#prodSlider .next').addEventListener('click',()=>{sNext(); sAuto();});
+/* products slider auto-scrolls continuously, like the reviews — it never pauses */
+document.getElementById('prodSlider').addEventListener('mouseleave',sAuto);
+document.getElementById('sliderDots').style.display='none';
+addEventListener('resize',()=>{ sClones(); sApply(false); });
+sClones(); sApply(false); sAuto();
+/* ---- client reviews ---- */
+const REVIEWS=[
+ {img:"r1.jpg",n:"Ahmed Al Mansoori",w:"Villa Owner · Palm Jumeirah, Dubai",t:"The Milano sofa and pergola completely changed our terrace. The quality feels five-star hotel level, and the team finished everything exactly on schedule."},
+ {img:"r2.jpg",n:"Sarah Mitchell",w:"General Manager · Beach Resort, Dubai",t:"Bliss furnished our entire pool deck — sunbeds, cabanas and umbrellas. Two seasons of heavy use and everything still looks brand new."},
+ {img:"r3.jpg",n:"Khalid Rahman",w:"Owner · Café Group, Abu Dhabi",t:"We ordered custom dining sets for three café terraces. Guests constantly ask where the furniture is from. Best investment we made this year."},
+ {img:"r4.jpg",n:"Priya Nair",w:"Interior Designer · Dubai",t:"As a designer I am very picky about fabrics. Their Sunbrella and Agora ranges, plus fully custom sizes, make Bliss my first call for outdoor projects."},
+ {img:"r5.jpg",n:"Omar Al Farsi",w:"Procurement Manager · Hotel Group, UAE",t:"A complete FF&E package for our balcony furniture — design, fabrication, delivery and installation under one team. Flawless coordination."},
+ {img:"r6.jpg",n:"Layla Haddad",w:"Villa Owner · Emirates Hills, Dubai",t:"Our gazebo and swing corner is now the family's favourite place every evening. Beautiful craftsmanship, and their maintenance visits keep it perfect."}];
+const rtrack=document.getElementById('revTrack');
+function revHTML(r,i){
+ return `<div class="rev-card" data-r="${i}"><div class="rc"><img src="../images/reviews/${r.img}" alt="${r.n}">
+ <div class="stars">★★★★★</div><blockquote>“${r.t}”</blockquote>
+ <div class="who"><b>${r.n}</b><span>${r.w}</span></div></div></div>`;
+}
+rtrack.innerHTML=REVIEWS.map(revHTML).join('');
+let ridx=0, rtimer=null, rAnimating=false;
+const rdots=document.getElementById('revDots');
+const ACCENTS=['#c08a8d','#d9b98a','#0d1f3c','#7d9db5'];
+const rPer=()=>innerWidth<=700?1:3;
+function rStep(){ const c=rtrack.children[0]; return c?c.getBoundingClientRect().width:0; }
+function rClones(){
+  if(!rtrack.children.length) return;
+  rtrack.querySelectorAll('.clone').forEach(e=>e.remove());
+  const pv=rPer();
+  for(let i=0;i<pv;i++){ const cl=rtrack.children[i].cloneNode(true); cl.classList.add('clone'); rtrack.appendChild(cl); }
+}
+function rMark(){
+  const mid=(ridx+Math.floor(rPer()/2))%REVIEWS.length;
+  rtrack.querySelectorAll('.rev-card').forEach(c=>c.classList.toggle('mid',+c.dataset.r===mid));
+  document.documentElement.style.setProperty('--revAccent',ACCENTS[ridx%ACCENTS.length]);
+  rdots.innerHTML=REVIEWS.map((_,i)=>`<button class="${i===ridx?'on':''}" data-i="${i}" aria-label="Review ${i+1}"></button>`).join('');
+}
+function rApply(anim){
+  rtrack.style.transition=anim?'':'none';
+  rtrack.style.transform=`translateX(${-ridx*rStep()}px)`;
+  rMark();
+}
+function rNext(){
+  if(rAnimating)return; rAnimating=true; ridx++; rApply(true);
+  setTimeout(()=>{ if(ridx>=REVIEWS.length){ ridx=0; rApply(false); } rAnimating=false; },680);
+}
+function rPrev(){
+  if(rAnimating)return;
+  if(ridx===0){ ridx=REVIEWS.length; rApply(false); requestAnimationFrame(()=>requestAnimationFrame(()=>{ rAnimating=true; ridx--; rApply(true); setTimeout(()=>rAnimating=false,680); })); }
+  else { rAnimating=true; ridx--; rApply(true); setTimeout(()=>rAnimating=false,680); }
+}
+function rAuto(){ clearInterval(rtimer); rtimer=setInterval(rNext,4500); }
+document.querySelector('#revBox .prev').addEventListener('click',()=>{rPrev(); rAuto();});
+document.querySelector('#revBox .next').addEventListener('click',()=>{rNext(); rAuto();});
+rdots.addEventListener('click',e=>{const b=e.target.closest('button'); if(b){ ridx=+b.dataset.i; rApply(true); rAuto(); }});
+document.getElementById('revBox').addEventListener('mouseenter',()=>clearInterval(rtimer));
+document.getElementById('revBox').addEventListener('mouseleave',rAuto);
+addEventListener('resize',()=>{ rClones(); rApply(false); });
+rClones(); rApply(false); rAuto();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+ if(!e.isIntersecting)return; cio.unobserve(e.target);
+ const to=+e.target.dataset.to,t0=performance.now();
+ (function tick(t){const p=Math.min((t-t0)/1400,1);e.target.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+/* ---- hero slider (slides from store settings) ---- */
+const HSLIDES=Bliss.settings().heroSlides;
+const heroBg=document.getElementById('heroBg'), heroTexts=document.getElementById('heroTexts'), hdots=document.getElementById('heroDots');
+const hsrc=s=>(s.img||'').startsWith('http')||(s.img||'').startsWith('data:')?s.img:'../'+s.img;
+heroBg.innerHTML=HSLIDES.map((s,i)=>`<div class="hslide${i===0?' on':''}"><img src="${hsrc(s)}" alt=""></div>`).join('');
+heroTexts.innerHTML=HSLIDES.map((s,i)=>`<div class="htext${i===0?' on':''}">
+  <div class="eyebrow">${s.kick||''}</div><h1>${s.h||''}</h1><p>${s.sub||''}</p>
+  <div class="hero-cta"><a class="btn rose" href="${s.link||'collection.html'}">${s.btn||'Explore'} <span class="arr">→</span></a></div></div>`).join('');
+const hslides=heroBg.querySelectorAll('.hslide'), htexts=heroTexts.querySelectorAll('.htext');
+let hcur=0, htimer=null;
+function hDraw(){ hdots.innerHTML=HSLIDES.map((_,i)=>`<button class="${i===hcur?'on':''}" data-i="${i}" aria-label="Slide ${i+1}"></button>`).join(''); }
+function hGo(i){
+  hcur=((i%HSLIDES.length)+HSLIDES.length)%HSLIDES.length;
+  hslides.forEach((s,k)=>s.classList.toggle('on',k===hcur));
+  htexts.forEach((s,k)=>s.classList.toggle('on',k===hcur));
+  hDraw();
+}
+function hAuto(){ clearInterval(htimer); htimer=setInterval(()=>hGo(hcur+1),6000); }
+document.getElementById('hPrev').addEventListener('click',()=>{hGo(hcur-1); hAuto();});
+document.getElementById('hNext').addEventListener('click',()=>{hGo(hcur+1); hAuto();});
+hdots.addEventListener('click',e=>{const b=e.target.closest('button'); if(b){hGo(+b.dataset.i); hAuto();}});
+hGo(0); hAuto();
+const bg=document.getElementById('heroBg');
+addEventListener('scroll',()=>{const y=scrollY;if(y<innerHeight)bg.style.transform=`translateY(${y*0.22}px)`},{passive:true});
+</script>
+<script>
+/* safety: never leave sections hidden */
+setTimeout(()=>{ document.querySelectorAll('.rv:not(.in)').forEach(el=>el.classList.add('in')); },3000);
+</script>
+<a id="waFloat" href="https://wa.me/923139168846?text=Hello%20Bliss%20Furnishing%2C%20I%20have%20a%20question" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:400;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(18,140,60,.45)"><svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16.1 3.2C9.3 3.2 3.8 8.6 3.8 15.3c0 2.4.7 4.7 2 6.7L3.7 29l7.3-1.9c1.6.9 3.3 1.3 5.1 1.3 6.8 0 12.3-5.4 12.3-12.1S22.9 3.2 16.1 3.2zm0 22.1c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.8 1 1-3.7-.2-.4a9.9 9.9 0 0 1-1.5-5.3c0-5.5 4.5-9.9 10-9.9s10 4.4 10 9.9-4.5 10-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.7-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg></a>
+<script>try{var _w=Bliss&&Bliss.settings&&Bliss.settings().wa;if(_w){document.getElementById('waFloat').href='https://wa.me/'+_w+'?text='+encodeURIComponent('Hello Bliss Furnishing, I have a question');}}catch(e){}</script>
+</body>
+</html>

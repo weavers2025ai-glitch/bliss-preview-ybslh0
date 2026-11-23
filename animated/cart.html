@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart & Checkout — Bliss Furnishing</title>
+<link rel="stylesheet" href="style.css?v=6">
+<style>
+.cartwrap{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start;padding-bottom:80px}
+.citem{display:grid;grid-template-columns:96px 1fr auto;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:13px;align-items:center}
+.citem img{width:96px;height:96px;object-fit:cover;border-radius:12px}
+.citem h3{font-size:17px}
+.citem .cp{color:var(--muted);font-size:13.5px}
+.qty{display:inline-flex;align-items:center;gap:2px;border:1.5px solid #d9d0bf;border-radius:99px;padding:3px;margin-top:8px}
+.qty button{width:28px;height:28px;border:0;border-radius:50%;background:var(--sand);font-size:16px;cursor:pointer;font-weight:800}
+.qty b{min-width:26px;text-align:center}
+.rm{background:none;border:0;color:#c0392b;font-weight:700;cursor:pointer;font-size:13px;margin-top:8px;display:block}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.panel h3{font-size:21px;margin-bottom:14px}
+.srow{display:flex;justify-content:space-between;padding:7px 0;font-size:15px}
+.srow.tot{border-top:1px solid var(--line);margin-top:8px;padding-top:13px;font-weight:800;font-size:17px}
+.fld{margin-bottom:13px}
+.fld label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+.fld input,.fld textarea,.fld select{width:100%;padding:12px 14px;border:1.5px solid #d9d0bf;border-radius:12px;font-family:inherit;font-size:14.5px;background:#fff}
+.pay{display:flex;gap:9px;align-items:flex-start;border:1.5px solid #d9d0bf;border-radius:12px;padding:11px 13px;margin-bottom:9px;cursor:pointer;font-size:14.5px}
+.pay:has(input:checked){border-color:var(--navy);background:var(--sand)}
+.place{width:100%;background:var(--rose);color:#fff;border:0;border-radius:99px;padding:15px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;margin-top:6px}
+.place:hover{background:var(--navy)}
+.ok{text-align:center;padding:70px 20px 90px}
+.ok .tick{width:84px;height:84px;border-radius:50%;background:#e7f4ec;color:#1e7d46;display:grid;place-items:center;font-size:40px;margin:0 auto 18px}
+@media(max-width:900px){.cartwrap{grid-template-columns:1fr}}
+@media(max-width:640px){.citem{grid-template-columns:72px 1fr;padding:12px}.citem img{width:72px;height:72px}.citem>div:last-child{grid-column:1/-1;text-align:right;font-size:17px}.panel{padding:20px}}
+</style>
+</head>
+<body>
+<div id="loader"><img src="../images/logo.png" alt="Bliss Furnishing"></div>
+<div class="nav-shell">
+  <div class="nav-in">
+    <a class="logo" href="index.html"><img src="../images/logo.png" alt="Bliss Furnishing"></a>
+    <nav class="main" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-acts">
+      <a class="nicon" href="account.html" title="My Account">👤</a>
+      <a class="nicon" href="cart.html" title="Cart">🛍<span class="cartCount">0</span></a>
+      <a class="btn" href="contact.html">Get a Quote <span class="arr">→</span></a>
+      <button class="burger" onclick="document.getElementById('mainNav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</div>
+
+<section class="wrap pagehero">
+  <div class="eyebrow">Your Cart</div>
+  <h1>Review & <em>check out</em></h1>
+</section>
+
+<div class="wrap" id="main"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div><a class="logo" href="index.html"><img src="../images/logo.png" alt="Bliss Furnishing"></a><p style="margin-top:16px" data-cnt="footer.tag">Crafting Comfort, Shaping Spaces.<br>A proud legacy of Weavers Creation — 15+ years of craftsmanship.</p></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="collection.html">Collection</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+      <div><h4>Shop</h4><a href="cart.html">My Cart</a><a href="account.html">My Account</a><a href="collection.html">Sofas</a><a href="collection.html">Gazebos & Pergolas</a><a href="collection.html">Umbrellas & Shades</a></div>
+      <div><h4>Get in Touch</h4><p>Email: sales@blissfurnishing.ae</p><p>Phone: +92 313 9168846</p><p>Web: www.blissfurnishing.ae</p><p>Showrooms: UAE & Indonesia (Jepara)</p></div>
+    </div>
+    <div class="big-word">Bliss</div>
+    <div class="foot-bar"><span>© 2026 Bliss Furnishing. All rights reserved.</span><span>Crafting Comfort, Shaping Spaces</span></div>
+  </div>
+</footer>
+
+<script>window.ROOT="../";</script>
+<script src="../data/products.js"></script>
+<script src="../assets/store.js?v=3"></script>
+<script>
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),400));
+setTimeout(()=>document.getElementById('loader').classList.add('done'),2000);
+const main=document.getElementById('main');
+function render(){
+  const cart=Bliss.cart(), ps=Bliss.products();
+  if(!cart.length){
+    main.innerHTML=`<div class="ok"><div class="tick">🛍</div><h2>Your cart is empty</h2>
+    <p style="color:var(--muted);margin:10px 0 22px">Browse the collection and add pieces you love.</p>
+    <a class="btn rose" href="collection.html">Shop the Collection →</a></div>`; return;
+  }
+  const total=Bliss.cartTotal(), quote=Bliss.cartHasQuote();
+  const u=Bliss.user()||{};
+  main.innerHTML=`<div class="cartwrap">
+   <div>${cart.map(i=>{const p=ps.find(x=>x.id===i.id); if(!p)return''; return `
+    <div class="citem"><img src="${Bliss.img(p)}" alt="${p.n}">
+     <div><h3>${p.n}</h3><div class="cp">${p.c} · ${p.price?Bliss.money(p.price):'Price on Request'}</div>
+      <span class="qty"><button onclick="chQty(${p.id},-1)">−</button><b>${i.qty}</b><button onclick="chQty(${p.id},1)">+</button></span>
+      <button class="rm" onclick="rmItem(${p.id})">Remove</button></div>
+     <div style="font-weight:800">${p.price?Bliss.money(p.price*i.qty):'<span style="color:var(--muted);font-size:13px;font-weight:600">Price on Request</span>'}</div></div>`}).join('')}
+   </div>
+   <div class="panel"><h3>Checkout</h3>
+    <div class="srow"><span>Subtotal</span><b>${Bliss.money(total)}</b></div>
+    <div class="srow"><span>Delivery (UAE)</span><b>Free</b></div>
+    <div class="srow tot"><span>Total Amount</span><span>${Bliss.money(total)}</span></div>
+    ${quote?'<p style="font-size:13px;color:var(--muted);margin:6px 0 14px">Your cart also has on-request pieces — their price is not included in the total above; our team will confirm the final amount before delivery.</p>':'<div style="margin-bottom:8px"></div>'}
+    <form id="coForm">
+     <div class="fld"><label>Full name *</label><input id="fName" required value="${u.name||''}"></div>
+     <div class="fld"><label>Phone / WhatsApp *</label><input id="fPhone" required placeholder="+971 …"></div>
+     <div class="fld"><label>Email</label><input id="fEmail" type="email" value="${u.email||''}"></div>
+     <div class="fld"><label>Delivery address *</label><textarea id="fAddr" required rows="2" placeholder="Villa / building, street, area"></textarea></div>
+     <div class="fld"><label>City *</label><input id="fCity" required placeholder="Dubai"></div>
+     <div class="fld"><label>Payment method</label>
+      <label class="pay"><input type="radio" name="pay" value="Cash on Delivery" checked><span><b>Cash on Delivery</b><br><small style="color:var(--muted)">Pay when your furniture arrives</small></span></label>
+      <label class="pay"><input type="radio" name="pay" value="Card on Delivery"><span><b>Card on Delivery</b><br><small style="color:var(--muted)">Our team brings a card machine</small></span></label>
+      <label class="pay"><input type="radio" name="pay" value="Bank Transfer"><span><b>Bank Transfer</b><br><small style="color:var(--muted)">We email you the bank details</small></span></label>
+      <label class="pay"><input type="radio" name="pay" value="WhatsApp Order"><span><b>Order on WhatsApp</b><br><small style="color:var(--muted)">Confirm everything on chat</small></span></label>
+     </div>
+     <button class="place" type="submit">Place Order</button>
+    </form>
+   </div></div>`;
+  document.getElementById('coForm').addEventListener('submit',placeOrder);
+}
+function chQty(id,d){ const it=Bliss.cart().find(i=>i.id===id); Bliss.setQty(id,(it?it.qty:1)+d); render(); }
+function rmItem(id){ Bliss.setQty(id,0); render(); }
+function placeOrder(e){
+  e.preventDefault();
+  const cart=Bliss.cart(), ps=Bliss.products();
+  const order={ id:"BLS-"+Math.floor(1000+Math.random()*9000), at:new Date().toLocaleString(),
+    items:cart.map(i=>{const p=ps.find(x=>x.id===i.id);return {n:p.n,qty:i.qty,price:p.price}}),
+    total:Bliss.cartTotal(), quote:Bliss.cartHasQuote(), status:"New",
+    customer:{name:fName.value, phone:fPhone.value, email:fEmail.value, addr:fAddr.value, city:fCity.value},
+    payment:document.querySelector('input[name=pay]:checked').value };
+  Bliss.addOrder(order); Bliss.clearCart();
+  const wa=Bliss.settings().wa;
+  const lines=order.items.map(i=>`• ${i.n} × ${i.qty}${i.price?' — '+Bliss.money(i.price*i.qty):''}`).join("\n");
+  const waText="Hello Bliss Furnishing, I just placed order "+order.id+" on your website:\n"+lines+"\nTotal: "+(order.quote?"to be confirmed":Bliss.money(order.total))+"\nName: "+order.customer.name+"\nPhone: "+order.customer.phone+"\nCity: "+order.customer.city+"\nAddress: "+order.customer.addr+"\nPayment: "+order.payment;
+  const waLink=`https://wa.me/${wa}?text=${encodeURIComponent(waText)}`;
+  main.innerHTML=`<div class="ok"><div class="tick">✓</div><h2>Order ${order.id} placed!</h2>
+   <p style="color:var(--muted);margin:10px auto 8px;max-width:520px">Thank you, ${order.customer.name.split(' ')[0]}. Total: <b style="color:var(--navy)">${order.quote?'to be confirmed':Bliss.money(order.total)}</b>. Our team will call ${order.customer.phone} shortly to confirm ${order.quote?'your quotation and ':''}delivery details.</p>
+   <p style="color:var(--muted);margin:0 auto 22px;max-width:520px">Tap the green button to send this order to our WhatsApp as well:</p>
+   <a class="btn" href="${waLink}" target="_blank" rel="noopener" style="background:#25D366;color:#fff">💬 Send Order on WhatsApp</a>
+   <a class="btn" href="collection.html" style="margin-left:8px">Continue Shopping</a></div>`;
+  if(order.payment==="WhatsApp Order") window.open(waLink,"_blank");
+}
+render();
+</script>
+<a id="waFloat" href="https://wa.me/923139168846?text=Hello%20Bliss%20Furnishing%2C%20I%20have%20a%20question" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:400;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(18,140,60,.45)"><svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16.1 3.2C9.3 3.2 3.8 8.6 3.8 15.3c0 2.4.7 4.7 2 6.7L3.7 29l7.3-1.9c1.6.9 3.3 1.3 5.1 1.3 6.8 0 12.3-5.4 12.3-12.1S22.9 3.2 16.1 3.2zm0 22.1c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3.8 1 1-3.7-.2-.4a9.9 9.9 0 0 1-1.5-5.3c0-5.5 4.5-9.9 10-9.9s10 4.4 10 9.9-4.5 10-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.7-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg></a>
+<script>try{var _w=Bliss&&Bliss.settings&&Bliss.settings().wa;if(_w){document.getElementById('waFloat').href='https://wa.me/'+_w+'?text='+encodeURIComponent('Hello Bliss Furnishing, I have a question');}}catch(e){}</script>
+</body>
+</html>
